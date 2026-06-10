@@ -26,7 +26,8 @@ jobs:
           
           # Entra na pasta do projeto ou clona (ajuste o link para o seu github)
           rm -rf projeto-cloud
-          git clone https://github.com/gaherrera00/lab11-tramasu.git projeto-cloud
+          git clone https://github.com/gaherrera00/lab11-tramasul.git projeto-cloud
+          git clone https://${{ secrets.GH_TOKEN }}@github.com/gaherrera00/lab11-tramasul.git projeto-cloud
           cd projeto-cloud
           
           # Builda a imagem usando o Dockerfile da Fase 4
