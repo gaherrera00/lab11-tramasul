@@ -161,11 +161,7 @@
 </footer>
 
 <script>
-  /* ===========================================================
-     >>> ALUNO: altere INSTANCE_LABEL em CADA instância EC2.
-     Ao acessar pelo balanceador, você verá rótulos diferentes
-     conforme o Auto Scaling distribui as requisições.
-     =========================================================== */
+
   const INSTANCE_LABEL = "web-srv-01";
   document.getElementById("host").textContent = INSTANCE_LABEL;
   document.title = "TramaSul Têxtil · " + INSTANCE_LABEL;
