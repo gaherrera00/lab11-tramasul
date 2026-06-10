@@ -14,10 +14,7 @@ jobs:
 
     - name: Configurar Chave SSH
       run: |
-        mkdir -p ~/.ssh
-        echo "${{ secrets.AWS_SSH_KEY }}" > ~/.ssh/id_rsa
-        chmod 600 ~/.ssh/id_rsa
-        ssh-keyscan -H ${{ secrets.AWS_EC2_IP }} >> ~/.ssh/known_hosts
+        mkdir -p ~/.ssh && echo "${{ secrets.AWS_SSH_KEY }}" > ~/.ssh/id_rsa && chmod 600 ~/.ssh/id_rsa && ssh-keyscan -H ${{ secrets.AWS_EC2_IP }} >> ~/.ssh/known_hosts
 
     - name: Construir e Atualizar o Container via Docker no EC2
       run: |
