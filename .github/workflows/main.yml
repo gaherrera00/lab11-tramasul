@@ -39,6 +39,10 @@ jobs:
             sudo docker stop container-onepage || true
             sudo docker rm container-onepage || true
 
+            # Para o Nginx para liberar a porta 80
+            sudo systemctl stop nginx
+            sudo systemctl disable nginx
+
             # Sobe novo container na porta 80
             sudo docker run -d -p 80:80 --name container-onepage onepage-textil
           EOF
